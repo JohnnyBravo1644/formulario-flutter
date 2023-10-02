@@ -48,13 +48,13 @@ class _FormularioState extends State<Formulario> {
 
   String? _validateDate(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Por favor, insira sua data de nascimento';
+      return 'insira sua data de nascimento';
     }
     try {
       DateTime.parse(value);
       return null;
     } catch (e) {
-      return 'Por favor, insira uma data válida';
+      return 'insira uma data válida';
     }
   }
 
@@ -111,14 +111,14 @@ class _FormularioState extends State<Formulario> {
               decoration: InputDecoration(labelText: 'Nome Completo'),
               validator: (value) {
                 if (value!.isEmpty) {
-                  return 'Por favor, insira seu nome';
+                  return 'insira seu nome';
                 }
                 return null;
               },
             ),
             if (nomeController.text.isEmpty)
               Text(
-                'Por favor, insira seu nome',
+                'insira seu nome',
                 style: TextStyle(color: Colors.red),
               ),
             GestureDetector(
@@ -136,7 +136,7 @@ class _FormularioState extends State<Formulario> {
             ),
             if (_validateDate(dataNascimento.toString()) != null)
               Text(
-                'Por favor, insira uma data válida',
+                'insira uma data válida',
                 style: TextStyle(color: Colors.red),
               ),
             TextFormField(
@@ -144,7 +144,7 @@ class _FormularioState extends State<Formulario> {
               decoration: InputDecoration(labelText: 'Cidade'),
               validator: (value) {
                 if (value!.isEmpty) {
-                  return 'Por favor, insira sua cidade';
+                  return 'insira sua cidade';
                 }
                 return null;
               },
@@ -154,7 +154,7 @@ class _FormularioState extends State<Formulario> {
               decoration: InputDecoration(labelText: 'País de Residência'),
               validator: (value) {
                 if (value!.isEmpty) {
-                  return 'Por favor, insira seu país de residência';
+                  return 'insira seu país de residência';
                 }
                 return null;
               },
@@ -183,7 +183,7 @@ class _FormularioState extends State<Formulario> {
               },
               validator: (value) {
                 if (value == null || value.isEmpty) {
-                  return 'Por favor, escolha uma opção';
+                  return 'escolha uma opção';
                 }
                 return null;
               },
@@ -202,8 +202,7 @@ class _FormularioState extends State<Formulario> {
                 ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      // Aqui você pode enviar os dados para onde quer que precise
-                      // Exemplo: enviar para um banco de dados, enviar por e-mail, etc.
+
                     }
                   },
                   child: Text('Enviar'),
